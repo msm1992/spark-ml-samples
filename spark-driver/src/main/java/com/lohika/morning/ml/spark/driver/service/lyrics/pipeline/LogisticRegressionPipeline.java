@@ -78,7 +78,7 @@ public class LogisticRegressionPipeline extends CommonLyricsPipeline {
                 .setEstimator(pipeline)
                 .setEvaluator(new BinaryClassificationEvaluator())
                 .setEstimatorParamMaps(paramGrid)
-                .setNumFolds(10);
+                .setNumFolds(5);
 
         CrossValidatorModel model = crossValidator.fit(sentences);
 
